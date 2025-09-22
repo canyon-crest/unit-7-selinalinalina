@@ -101,10 +101,16 @@ public class Unit7 {
         // TODO: Implement this method
     	int swap1 = (int)(Math.random()*list.size());
     	int swap2 = (int)(Math.random()*list.size());
-    	int x = list.get(swap1);
-    	int y = list.get(swap2);
-    	list.set(swap1, y);
-    	list.set(swap2, x);
-
+    	int counter =0;
+    	while(counter<list.size()/2) {
+    		int x = list.get(swap1);
+    		int y = list.get(swap2);
+    		list.set(swap1, y);
+    		list.set(swap2, x);
+    		swap1 = (int)(Math.random()*list.size());
+    		swap2 = (int)(Math.random()*list.size());
+    		counter++;
+    	}
     }
-}
+ }
+
